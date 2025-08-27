@@ -1,0 +1,8 @@
+# Dockerfile pentru frontend static Libra-AI
+FROM nginx:alpine
+
+# Copiază fișierele frontend în directorul public nginx
+COPY frontend/ /usr/share/nginx/html/
+
+# Expune portul 80
+EXPOSE 80

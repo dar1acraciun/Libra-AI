@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  libra-backend:
+    build: .
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./backend:/Libra-AI/backend
+      - ./frontend:/Libra-AI/frontend
+      - ./data:/Libra-AI/data
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    restart: unless-stopped
