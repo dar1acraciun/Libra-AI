@@ -1,55 +1,63 @@
 # Libra AI
 
-Libra AI este un asistent inteligent pentru recomandări personalizate de cărți, cu interfață web modernă și backend Python/Flask.
+Libra AI is an intelligent assistant for personalized book recommendations, featuring a modern web interface and a Python/Flask backend.
 
-## Funcționalități principale
-- Recomandări de cărți pe baza preferințelor utilizatorului
-- Generare copertă AI pentru fiecare recomandare
-- Redare audio a descrierii cărții (text-to-speech)
-- Interfață chat modernă, cu butoane rapide și design responsive
+## Main Features
+- Personalized book recommendations based on user preferences
+- AI-generated book covers for each recommendation
+- Text-to-speech: listen to the book description
+- Modern chat interface with quick prompts and responsive design
+- **Language filter:** automatically detects and blocks inappropriate or offensive language in user prompts and AI responses, ensuring a safe and friendly experience
 
-## Structură proiect
+## Project Structure
 ```
 Libra-AI/
-├── backend/         # Codul sursă Flask (API, generare copertă, TTS)
-├── frontend/        # Interfață web (HTML, CSS, JS)
+├── backend/         # Flask source code (API, cover generation, TTS, language filter)
+├── frontend/        # Web interface (HTML, CSS, JS)
 │   └── main.html
-├── data/            # Date de test (ex: books.json)
-├── Dockerfile       # Pentru rulare containerizată
+├── data/            # Test data (e.g., books.json)
+├── Dockerfile       # For containerized deployment
 ├── docker-compose.yml
 ├── .gitignore
 └── README.md
 ```
 
-## Instalare rapidă (local)
-1. Clonează repo:
+## Quick Start (Local)
+1. Clone the repository:
    ```
    git clone https://github.com/dar1acraciun/Libra-AI.git
    cd Libra-AI
    ```
-2. Instalează dependențele backend (Python 3.8+):
+2. Install backend dependencies (Python 3.8+):
    ```
    cd backend
    pip install -r requirements.txt
    ```
-3. Rulează backend-ul Flask:
+3. Run the Flask backend:
    ```
    python main.py
    ```
-4. Deschide frontend/main.html în browser.
+4. Open `frontend/main.html` in your browser.
 
-## Rulare cu Docker
-1. Asigură-te că ai Docker și docker-compose instalate.
-2. Rulează:
+## Run with Docker
+1. Make sure you have Docker and docker-compose installed.
+2. Run:
    ```
    docker-compose up --build
    ```
-3. Accesează aplicația la adresa indicată (ex: http://localhost:5001)
+3. Access the app at the indicated address (e.g., http://localhost:5001)
 
-## Setări și fișiere importante
-- `frontend/main.html` – interfața principală
-- `backend/main.py` – logica serverului Flask
-- `data/books.json` – date de test pentru recomandări
-- `.env` – variabile de mediu (dacă e nevoie)
+## Key Files and Settings
+- `frontend/main.html` – main web interface
+- `backend/main.py` – Flask server logic (including language filter)
+- `data/books.json` – test data for recommendations
+- `.env` – environment variables (if needed)
 
+## Language Filter
+Libra AI includes a language filter that automatically detects and blocks inappropriate, offensive, or unsafe language in both user prompts and AI-generated responses. This ensures a safe, respectful, and friendly experience for all users.
 
+## Contributing
+Pull requests and suggestions are welcome!
+
+## License
+MIT
