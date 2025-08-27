@@ -1,0 +1,43 @@
+# Libra-AI .gitignore
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Data
+/data/*.json
+/data/*.csv
+/data/*.db
+
+# Docker
+*.pid
+*.sock
+
+# Others
+*.env
+.env.*
+
+# Frontend build
+frontend/dist/
+frontend/build/
